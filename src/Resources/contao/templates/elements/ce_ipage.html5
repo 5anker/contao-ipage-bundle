@@ -19,7 +19,7 @@
 				<div class="item">
 					<?php $tag = $slide->href ? 'a' : 'div'; ?>
 					<?php $attr = $slide->href ? ('href="'.$slide->href.'"') : ''; ?>
-					<?php $attr .= $slide->type == 'image' ? (' style="background-image: url(' . \Anker\ModulesBundle\Helper\Image::make($slide->src) . '"') : ''; ?>
+					<?php $attr .= $slide->type == 'image' ? (' style="background-image: url(img/' . $slide->src . '"') : ''; ?>
 					<<?= $tag; ?> <?= $attr; ?>>
 						<div class="caption">
 							<?= $slide->title; ?>
