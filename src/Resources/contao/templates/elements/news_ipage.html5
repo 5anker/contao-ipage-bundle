@@ -1,0 +1,31 @@
+<article itemscope="itemscope" itemtype="http://schema.org/Article">
+	<a href="<?= $this->href ?>" target="_blank" class="post-item" itemprop="mainEntityOfPage">
+		<?php if($this->src): ?>
+		<img alt="<?= $this->title ?>" title="<?= $this->title ?>" align="left" class="shadow lazy" style="position: relative; left: -30px; top: -30px;" data-src="{{img::<?= $this->src ?>?mark=&w=380}}" data-srcset="{{img::<?= $this->src ?>?mark=&w=760}} 2x">
+		<?php endif; ?>
+		<section align="left" class="d-inline">
+			<h2 itemprop="name" class="h6 font-weight-bold">
+				<?= $this->title ?>
+			</h2>
+			<div class="info mb-3">
+				<?= $this->teaser ?>
+			</div>
+			<meta itemprop="author" content="Bootsreisen24">
+			<meta itemprop="datePublished" content="<?= $this->datetime ?>">
+			<meta itemprop="dateModified" content="<?= $this->datetime ?>">
+			<meta itemprop="headline" content="<?= $this->title ?>">
+			<?php if($this->src): ?>
+			<meta itemprop="image" content="{{env::path}}<?= $this->src ?>">
+			<?php endif; ?>
+			<div itemprop="publisher" itemscope="itemscope" itemtype="https://schema.org/Organization">
+				<div itemprop="logo" itemscope="itemscope" itemtype="https://schema.org/ImageObject" src="https://www.bootsreisen24.de/files/br24de/images/logo-sd.jpg">
+					<meta itemprop="url" content="https://www.bootsreisen24.de/">
+					<meta itemprop="width" content="218">
+					<meta itemprop="height" content="60">
+				</div>
+				<meta itemprop="name" content="Bootsreisen24">
+			</div>
+		</section>
+	</a>
+	<div class="clearfix"></div>
+</article>

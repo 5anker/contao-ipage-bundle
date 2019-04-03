@@ -1,0 +1,14 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="src/Resources/contao/languages/en/tl_module.php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="tl_module.ipage.0">
+        <source>News archives</source>
+        <target>Nachrichtenarchive</target>
+      </trans-unit>
+      <trans-unit id="tl_module.ipage.1">
+        <source>Please select one or more news archives.</source>
+        <target>Bitte wählen Sie ein oder mehrere Nachrichtenarchive.</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

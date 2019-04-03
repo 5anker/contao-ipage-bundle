@@ -1,0 +1,118 @@
+<div class="ce_ipage">
+	<div class="jumbotron">
+		<div class="jumbotron-excerpt">
+			<div class="topper inverted">
+				<div class="container relative">
+					<?php $this->insert('beratung'); ?>
+					{{insert_module::31}}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container pt-5">
+		<h1 class="h4 h2-md pt-5 pb-3">
+			<?= $this->title ?>
+		</h1>
+		<div class="jumbotron">
+			<wls-slider>
+				<?php foreach($this->slides as $slide): ?>
+				<div class="item">
+					<?php $tag = $slide->href ? 'a' : 'div'; ?>
+					<?php $attr = $slide->href ? ('href="'.$slide->href.'"') : ''; ?>
+					<?php $attr .= $slide->type == 'image' ? (' style="background-image: url(' . \Anker\ModulesBundle\Helper\Image::make($slide->src) . '"') : ''; ?>
+					<<?= $tag; ?> <?= $attr; ?>>
+						<div class="caption">
+							<?= $slide->title; ?>
+						</div>
+						<?php if($slide->type == 'video'): ?>
+						<div class="embed-responsive embed-responsive-21by9">
+							<iframe class="embed-responsive-item" src="<?= $slide->href; ?>?rel=0" allowfullscreen></iframe>
+						</div>
+						<?php endif; ?>
+					</<?= $tag; ?>>
+				</div>
+				<?php endforeach; ?>
+			</wls-slider>
+		</div>
+	</div>
+	<div id="search-form">
+		<div class="container p-0 px-sm-3">
+			<div class="inner radius-0 radius-md-1">
+				<?= $this->formular; ?>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-lg-8">
+				<h2 class="h4 font-weight-bold mb-4">
+					<?= $this->headline ?>
+				</h2>
+				<?= $this->content ?>
+				<?php if(count($this->features)):?>
+				<div class="here-you-can d-flex radius" style="background: #fff; color: #333; font-weight: 600; padding: 15px; margin: 0 -35px 15px 0;">
+					<?php foreach($this->features as $k => $feature): ?>
+					<div class="mr-5 d-flex align-items-center" data-toggle="popover" data-placement="bottom" data-content="<?= htmlspecialchars($feature->content); ?>"><i class="<?= $feature->icon; ?> mr-2" style="color: #2b3e67; font-size: 1.4rem"></i> <span>
+							<?= $feature->title; ?></span></div>
+					<?php endforeach; ?>
+				</div>
+				<?php endif; ?>
+				<?php if($this->src): ?>
+				<img src="{{img::<?= $this->src; ?>?mark=}}" alt="<?= $this->title ?>" class="img-fluid mt-2 mb-2" />
+				<?php endif; ?>
+				<?= $this->elements ?>
+				<nav class="mt-5">
+					<div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
+						<?php if(count($this->news)):?>
+						<a class="nav-item nav-link active text-uppercase font-weight-bold" id="nav-news-tab" data-toggle="tab" href="#nav-news" role="tab" aria-controls="nav-news" aria-selected="true">Entdecken</a>
+						<?php endif; ?>
+						<?php if(count($this->cruises)): ?>
+						<a class="nav-item nav-link text-uppercase font-weight-bold" id="nav-cruises-tab" data-toggle="tab" href="#nav-cruises" role="tab" aria-controls="nav-cruises" aria-selected="false">Törnvorschläge</a>
+						<?php endif; ?>
+					</div>
+				</nav>
+				<div class="tab-content pt-5" id="nav-tabContent">
+					<?php if(count($this->news)):?>
+					<div class="tab-pane fade show active" id="nav-news" role="tabpanel" aria-labelledby="nav-news-tab">
+						<?php foreach($this->news as $k => $news): ?>
+						<?= $this->insert('news_ipage', (array)$news); ?>
+						<?php endforeach; ?>
+					</div>
+					<?php endif; ?>
+					<?php if(count($this->cruises)): ?>
+					<div class="tab-pane fade" id="nav-cruises" role="tabpanel" aria-labelledby="nav-cruises-tab">
+						<?php foreach($this->cruises as $k => $cruise): ?>
+						<?= $this->insert('news_ipage', (array)$cruise); ?>
+						<?php endforeach; ?>
+					</div>
+					<?php endif; ?>
+				</div>
+			</div>
+			<div class="col-12 col-lg-4">
+				<?= $this->insert('ce_vorteile'); ?>
+				<div class="accordion">
+					<?php foreach($this->infos as $k => $info): ?>
+					<div class="card">
+						<div class="card-header <?= $k === 0 ? '' : 'collapsed' ?>" data-toggle="collapse" data-target="#collapse<?= $k; ?>" aria-expanded="true" aria-controls="collapse<?= $k; ?>">
+							<?= $info->title; ?>
+						</div>
+						<div id="collapse<?= $k; ?>" class="collapse <?= $k === 0 ? 'show' : '' ?>">
+							<div class="card-body">
+								<?= $info->content; ?>
+							</div>
+						</div>
+					</div>
+					<?php endforeach; ?>
+				</div>
+				<div class="card mt-4">
+					<div class="card-body">
+						<div class="sidebar-alt">
+							<h2 class="h4 card-title text-center mb-4">passende Boote</h2>
+							<wls-sidebar query="<?= $this->query; ?>"></wls-sidebar>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

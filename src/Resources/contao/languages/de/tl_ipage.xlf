@@ -1,0 +1,106 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="tl_ipage.new.0">
+        <source>New Info-Page</source>
+        <target>Neue Info-Seite</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.new.1">
+        <source>Create a new Info-Page</source>
+        <target>Einen neuen Beitrag erstellen</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.show.0">
+        <source>Item details</source>
+        <target>Seitendetails</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.show.1">
+        <source>Show the details of info page item ID %s</source>
+        <target>Die Details der Info-Seite ID %s anzeigen</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.edit.0">
+        <source>Edit item</source>
+        <target>Info-Seite bearbeiten</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.edit.1">
+        <source>Edit info page item ID %s</source>
+        <target>Info-Seite ID %s bearbeiten</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.copy.0">
+        <source>Duplicate item</source>
+        <target>Info-Seite duplizieren</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.copy.1">
+        <source>Duplicate info page item ID %s</source>
+        <target>Info-Seite ID %s duplizieren</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.title_legend">
+        <source>Title</source>
+        <target>Titel</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.teaser_legend">
+        <source>Teaser</source>
+        <target>Teaser</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.content_legend">
+        <source>Content</source>
+        <target>Inhalt</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.formular_legend">
+        <source>Formular</source>
+        <target>Formular</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.title.0">
+        <source>Title</source>
+        <target>Titel</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.title.1">
+        <source>Please enter the info page title.</source>
+        <target>Bitte geben Sie den Info-Seiten-Titel ein.</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.headline.0">
+        <source>Headline</source>
+        <target>Überschrift</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.headline.1">
+        <source>Please enter the info page headline.</source>
+        <target>Bitte geben Sie die Info-Seiten-Überschrift ein.</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.teaser.0">
+        <source>Teaser</source>
+        <target>Teaser</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.content.0">
+        <source>Content</source>
+        <target>Inhalt</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.slider.1">
+        <source>Slider</source>
+        <target>Slider</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.infos.1">
+        <source>Infos</source>
+        <target>Infos</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.features.1">
+        <source>Features</source>
+        <target>Features</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.formular.0">
+        <source>Formular</source>
+        <target>Suchformular</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.news.0">
+        <source>News</source>
+        <target>Verlinkte Beiträge</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.cruises.0">
+        <source>Cruises</source>
+        <target>Verlinkte Törnvorschläge</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage.query.0">
+        <source>Query</source>
+        <target>Boote-Query</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,52 @@
+{
+	"name": "5anker/contao-ipage-bundle",
+	"description": "iPage Bundle",
+	"keywords": ["contao", "5anker", "connect"],
+	"type": "contao-bundle",
+	"homepage": "https://www.5-anker.com",
+	"license": "LGPL-3.0-or-later",
+	"authors": [
+	{
+		"name": "Jonas Imping",
+		"homepage": "https://www.5-anker.com",
+		"role": "Developer"
+	}],
+	"require": {
+        "php": "^7.1",
+        "patchwork/utf8": "^1.2",
+        "symfony/config": "3.4.* || 4.1.*",
+        "symfony/dependency-injection": "3.4.* || 4.1.*",
+        "symfony/http-kernel": "3.4.* || 4.1.*",
+        "symfony/yaml": "3.4.* || 4.1.*"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.3.1",
+        "contao/test-case": "^1.4.1",
+        "php-http/guzzle6-adapter": "^1.1",
+        "phpunit/phpunit": "^7.0",
+        "symfony/phpunit-bridge": "^3.4.5"
+    },
+	"extra": {
+        "branch-alias": {
+            "dev-4.6": "4.6.x-dev"
+        },
+		"contao-manager-plugin": "Anker\\IPageBundle\\ContaoManager\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Anker\\IPageBundle\\": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao/"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/",
+            "src/Resources/contao/templates/"
+        ]
+    }
+}

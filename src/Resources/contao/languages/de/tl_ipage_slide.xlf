@@ -1,0 +1,70 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="tl_ipage_slide.new.0">
+        <source>New Slide</source>
+        <target>Neuen Slide</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage_slide.new.1">
+        <source>Create a new Slide</source>
+        <target>Einen neuen Slide erstellen</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage_slide.show.0">
+        <source>Item details</source>
+        <target>Slidedetails</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage_slide.show.1">
+        <source>Show the details of slide item ID %s</source>
+        <target>Die Details des Slides ID %s anzeigen</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage_slide.edit.0">
+        <source>Edit item</source>
+        <target>Slide bearbeiten</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage_slide.edit.1">
+        <source>Edit slide item ID %s</source>
+        <target>Slide ID %s bearbeiten</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage_slide.copy.0">
+        <source>Duplicate item</source>
+        <target>Slide duplizieren</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage_slide.copy.1">
+        <source>Duplicate slide item ID %s</source>
+        <target>Slide ID %s duplizieren</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage_slide.title_legend">
+        <source>Title</source>
+        <target>Titel</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage_slide.media_legend">
+        <source>Media</source>
+        <target>Media</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage_slide.title.0">
+        <source>Title</source>
+        <target>Titel</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage_slide.type.0">
+        <source>Type</source>
+        <target>Art</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage_slide.image.0">
+        <source>Image</source>
+        <target>Bild</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage_slide.video.0">
+        <source>Video</source>
+        <target>YouTube Video</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage_slide.title.1">
+        <source>Please enter the slide title.</source>
+        <target>Bitte geben Sie den Slide-Titel ein.</target>
+      </trans-unit>
+      <trans-unit id="tl_ipage_slide.href.0">
+        <source>URL</source>
+        <target>URL</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
