@@ -136,11 +136,15 @@ class ContentIPage extends ContentElement
 
 				$content = \StringUtil::encodeEmail($content);
 
-				$features[] = (object)[
-					'title' => $objElement->title,
-					'icon' => $objElement->icon,
-					'content' => $content
-				];
+				$objModel = \FilesModel::findByUuid($objElement->icon);
+
+				if ($objModel !== null && is_file(TL_ROOT . '/' . $objModel->path)) {
+					$features[] = (object)[
+						'title' => $objElement->title,
+						'icon' => $objModel->path,
+						'content' => $content
+					];
+				}
 			}
 		}
 

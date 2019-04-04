@@ -85,10 +85,9 @@ $GLOBALS['TL_DCA']['tl_ipage_feature'] = [
 		'icon' => [
 			'label'                   => &$GLOBALS['TL_LANG']['tl_ipage_feature']['icon'],
 			'exclude'                 => true,
-			'search'                  => true,
-			'inputType'               => 'text',
-			'eval'                    => ['maxlength'=>200],
-			'sql'                     => "varchar(255) NOT NULL default ''"
+			'inputType'               => 'fileTree',
+			'eval'                    => ['fieldType'=>'radio', 'filesOnly'=>true, 'extensions'=>Config::get('validImageTypes'), 'mandatory'=>true],
+			'sql'                     => "binary(16) NULL"
 		],
 		'content' => [
 			'label'                   => &$GLOBALS['TL_LANG']['tl_ipage_feature']['content'],
@@ -116,6 +115,16 @@ class tl_ipage_feature
 {
 	public function parseRow($arrRow)
 	{
-		return '<div class="cte_type published">'.$arrRow['title'].' ('.$arrRow['icon'].')</div><div class="limit_height">'.$arrRow['content'].'</div>' . "\n";
+		$objTemplate = new \BackendTemplate('be_wildcard');
+		$objTemplate->wildcard = $arrRow['content'];
+		$objTemplate->title = $arrRow['title'];
+
+		$objModel = \FilesModel::findByUuid($arrRow['icon']);
+
+		if ($objModel !== null && is_file(TL_ROOT . '/' . $objModel->path)) {
+			$objTemplate->wildcard = '<div style="padding-top: 10px"><img src="'.$objModel->path.'" style="height: 50px; margin-right: 10px" align="left" />' . $objTemplate->wildcard . '</div>';
+		}
+
+		return $objTemplate->parse();
 	}
 }

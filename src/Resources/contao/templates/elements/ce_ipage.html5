@@ -52,7 +52,7 @@
 				<?php if(count($this->features)):?>
 				<div class="here-you-can d-flex radius" style="background: #fff; color: #333; font-weight: 600; padding: 15px; margin: 0 -35px 15px 0;">
 					<?php foreach($this->features as $k => $feature): ?>
-					<div class="mr-5 d-flex align-items-center" data-toggle="popover" data-placement="bottom" data-content="<?= htmlspecialchars($feature->content); ?>"><i class="<?= $feature->icon; ?> mr-2" style="color: #2b3e67; font-size: 1.4rem"></i> <span>
+					<div class="mr-5 d-flex align-items-center" data-toggle="popover" data-placement="bottom" data-content="<?= htmlspecialchars($feature->content); ?>"><img src="<?= $feature->icon; ?>" class="mr-2" style="height: 35px"/> <span>
 							<?= $feature->title; ?></span></div>
 					<?php endforeach; ?>
 				</div>

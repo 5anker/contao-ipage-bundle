@@ -142,8 +142,17 @@ class tl_ipage_slide
 	public function parseRow($arrRow)
 	{
 		$objTemplate = new \BackendTemplate('be_wildcard');
-		$objTemplate->wildcard = $arrRow['href'];
 		$objTemplate->title = $arrRow['title'];
+
+		if ($arrRow['type'] == 'image') {
+			$objModel = \FilesModel::findByUuid($arrRow['singleSRC']);
+
+			if ($objModel !== null && is_file(TL_ROOT . '/' . $objModel->path)) {
+				$objTemplate->wildcard = '<div style="padding-top: 10px"><img src="'.$objModel->path.'" style="height: 50px; margin-right: 10px" align="left" />' . $objTemplate->wildcard . '</div>';
+			}
+		} else {
+			$objTemplate->wildcard = '<div style="padding-top: 10px"><iframe class="embed-responsive-item" src="'. $arrRow['href'] . '" frameborder="0" allowfullscreen="" width="560" height="315"></iframe></div>';
+		}
 
 		return $objTemplate->parse();
 	}

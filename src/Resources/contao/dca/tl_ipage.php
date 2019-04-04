@@ -60,17 +60,17 @@ $GLOBALS['TL_DCA']['tl_ipage'] = [
 			'slider' => [
 				'label'               => &$GLOBALS['TL_LANG']['tl_ipage']['slider'],
 				'href'                => 'table=tl_ipage_slide',
-				'icon'                => 'sizes.svg'
+				'icon'                => 'bundles/ankeripage/gallery.svg'
 			],
 			'infos' => [
 				'label'               => &$GLOBALS['TL_LANG']['tl_ipage']['infos'],
 				'href'                => 'table=tl_ipage_info',
-				'icon'                => 'content.svg'
+				'icon'                => 'bundles/ankeripage/accordion.svg'
 			],
 			'features' => [
 				'label'               => &$GLOBALS['TL_LANG']['tl_ipage']['features'],
 				'href'                => 'table=tl_ipage_feature',
-				'icon'                => 'diff.svg'
+				'icon'                => 'bundles/ankeripage/feature.svg'
 			],
 			'delete' => [
 				'label'               => &$GLOBALS['TL_LANG']['tl_content']['delete'],
