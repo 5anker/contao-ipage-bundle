@@ -54,6 +54,7 @@ class ContentIPage extends ContentElement
 		$this->Template->teaser = \StringUtil::encodeEmail($this->teaser);
 		$this->Template->formular = $ipage->formular;
 		$this->Template->query = $ipage->bquery;
+		$this->Template->slider = $ipage->slider;
 
 		$objModel = \FilesModel::findByUuid($ipage->singleSRC);
 
@@ -78,7 +79,7 @@ class ContentIPage extends ContentElement
 
 		// Slides
 
-		$objElement = IPageSlideModel::findByPid($this->ipage);
+		$objElement = IPageSlideModel::findByPid($this->ipage, ['order' => 'sorting']);
 
 		if ($objElement !== null) {
 			while ($objElement->next()) {
@@ -97,7 +98,7 @@ class ContentIPage extends ContentElement
 
 		// infos
 
-		$objElement = IPageInfoModel::findByPid($this->ipage);
+		$objElement = IPageInfoModel::findByPid($this->ipage, ['order' => 'sorting']);
 
 		if ($objElement !== null) {
 			while ($objElement->next()) {
@@ -121,7 +122,7 @@ class ContentIPage extends ContentElement
 
 		// features
 
-		$objElement = IPageFeatureModel::findByPid($this->ipage);
+		$objElement = IPageFeatureModel::findByPid($this->ipage, ['order' => 'sorting']);
 
 		if ($objElement !== null) {
 			while ($objElement->next()) {

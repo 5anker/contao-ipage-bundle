@@ -101,6 +101,10 @@
         <source>Query</source>
         <target>Boote-Query</target>
       </trans-unit>
+      <trans-unit id="tl_ipage.slider.0">
+        <source>Slider</source>
+        <target>Slider-Optionen</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

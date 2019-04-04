@@ -152,6 +152,13 @@ $GLOBALS['TL_DCA']['tl_ipage'] = [
 			'eval'                    => [],
 			'sql'                     => "text NULL"
 		],
+		'slider' => [
+			'label'                   => &$GLOBALS['TL_LANG']['tl_ipage']['slider'],
+			'exclude'                 => true,
+			'inputType'               => 'textarea',
+			'eval'                    => [],
+			'sql'                     => "text NULL"
+		],
 		'news' => [
 			'label'                   => &$GLOBALS['TL_LANG']['tl_ipage']['news'],
 			'exclude'                 => true,
@@ -170,6 +177,7 @@ $GLOBALS['TL_DCA']['tl_ipage'] = [
 			'sql'                     => "blob NULL",
 			'relation'                => ['type'=>'hasMany', 'load'=>'lazy', 'table' => 'tl_news']
 		],
+
 		'tstamp' => [
 			'sql'                     => "int(10) unsigned NOT NULL default '0'"
 		],

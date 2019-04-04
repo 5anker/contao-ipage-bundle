@@ -14,7 +14,7 @@
 			<?= $this->title ?>
 		</h1>
 		<div class="jumbotron">
-			<wls-slider>
+			<wls-slider options="<?= $this->slider; ?>">
 				<?php foreach($this->slides as $slide): ?>
 				<div class="item">
 					<?php $tag = $slide->href ? 'a' : 'div'; ?>
