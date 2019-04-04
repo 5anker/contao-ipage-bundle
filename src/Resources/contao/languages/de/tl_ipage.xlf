@@ -45,9 +45,9 @@
         <source>Content</source>
         <target>Inhalt</target>
       </trans-unit>
-      <trans-unit id="tl_ipage.formular_legend">
-        <source>Formular</source>
-        <target>Formular</target>
+      <trans-unit id="tl_ipage.options_legend">
+        <source>Options</source>
+        <target>Optionen</target>
       </trans-unit>
       <trans-unit id="tl_ipage.title.0">
         <source>Title</source>

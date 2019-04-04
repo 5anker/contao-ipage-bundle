@@ -88,7 +88,7 @@ $GLOBALS['TL_DCA']['tl_ipage'] = [
 
 	// Palettes
 	'palettes' => [
-		'default'                     => '{title_legend},title,headline;{content_legend},content,singleSRC,news,cruises;{formular_legend},formular,bquery'
+		'default'                     => '{title_legend},title,headline;{content_legend},content,singleSRC,news,cruises;{options_legend},formular,bquery,slider'
 	],
 
 	// Fields
