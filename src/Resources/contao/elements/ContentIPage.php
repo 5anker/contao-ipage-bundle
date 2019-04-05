@@ -4,6 +4,7 @@ namespace Anker\IPageBundle;
 
 use Contao\NewsModel;
 use Contao\ContentElement;
+use Detection\MobileDetect;
 
 class ContentIPage extends ContentElement
 {
@@ -55,6 +56,7 @@ class ContentIPage extends ContentElement
 		$this->Template->formular = $ipage->formular;
 		$this->Template->query = $ipage->bquery;
 		$this->Template->slider = $ipage->slider;
+		$this->Template->detect = new MobileDetect();
 
 		$objModel = \FilesModel::findByUuid($ipage->singleSRC);
 
