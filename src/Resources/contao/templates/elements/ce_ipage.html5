@@ -35,6 +35,7 @@
 			</wls-slider>
 		</div>
 	</div>
+	<?php if(!empty($this->formular)): ?>
 	<div id="search-form">
 		<div class="container p-0 px-sm-3">
 			<div class="inner radius-0 radius-md-1">
@@ -42,6 +43,7 @@
 			</div>
 		</div>
 	</div>
+	<?php endif; ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-lg-8">
@@ -74,38 +76,40 @@
 				<div class="tab-content pt-5" id="nav-tabContent">
 					<?php if(count($this->news)):?>
 					<div class="tab-pane fade show active" id="nav-news" role="tabpanel" aria-labelledby="nav-news-tab">
-						<?php if($this->detect->isMobile()) echo '<wls-slider>'; ?>
+						<?= ($this->detect->isMobile()) ? '<wls-slider>' : '<div style="max-height: 400px; overflow: auto;">'; ?>
 						<?php foreach($this->news as $k => $news): ?>
 						<?= $this->insert('news_ipage', (array)$news); ?>
 						<?php endforeach; ?>
-						<?php if($this->detect->isMobile()) echo '</wls-slider>'; ?>
+						<?= ($this->detect->isMobile()) ? '</wls-slider>' : '</div>'; ?>
 					</div>
 					<?php endif; ?>
 					<?php if(count($this->cruises)): ?>
 					<div class="tab-pane fade" id="nav-cruises" role="tabpanel" aria-labelledby="nav-cruises-tab">
-						<?php if($this->detect->isMobile()) echo '<wls-slider padding>'; ?>
+						<?= ($this->detect->isMobile()) ? '<wls-slider>' : '<div style="max-height: 400px; overflow: auto;">'; ?>
 						<?php foreach($this->cruises as $k => $cruise): ?>
 						<?= $this->insert('news_ipage', (array)$cruise); ?>
 						<?php endforeach; ?>
-						<?php if($this->detect->isMobile()) echo '</wls-slider>'; ?>
+						<?= ($this->detect->isMobile()) ? '</wls-slider>' : '</div>'; ?>
 					</div>
 					<?php endif; ?>
 				</div>
 			</div>
 			<div class="col-12 col-lg-4">
 				<?= $this->insert('ce_vorteile'); ?>
+				<?php if(!empty($this->query)): ?>
 				<div class="card mb-4">
 					<div class="card-body">
 						<wls-navigator pm="2" query="<?= $this->query; ?>" redirect="popup"></wls-navigator>
 					</div>
 				</div>
+				<?php endif; ?>
 				<div class="accordion">
 					<?php foreach($this->infos as $k => $info): ?>
 					<div class="card">
-						<div class="card-header <?= $k === 0 ? '' : 'collapsed' ?>" data-toggle="collapse" data-target="#collapse<?= $k; ?>" aria-expanded="true" aria-controls="collapse<?= $k; ?>">
+						<div class="card-header" data-toggle="collapse" data-target="#collapse<?= $k; ?>" aria-expanded="true" aria-controls="collapse<?= $k; ?>">
 							<?= $info->title; ?>
 						</div>
-						<div id="collapse<?= $k; ?>" class="collapse <?= $k === 0 ? 'show' : '' ?>">
+						<div id="collapse<?= $k; ?>" class="collapse">
 							<div class="card-body">
 								<?= $info->content; ?>
 							</div>

@@ -125,7 +125,7 @@ $GLOBALS['TL_DCA']['tl_ipage'] = [
 			'label'                   => &$GLOBALS['TL_LANG']['tl_content']['singleSRC'],
 			'exclude'                 => true,
 			'inputType'               => 'fileTree',
-			'eval'                    => ['fieldType'=>'radio', 'filesOnly'=>true, 'extensions'=>Config::get('validImageTypes'), 'mandatory'=>true],
+			'eval'                    => ['fieldType'=>'radio', 'filesOnly'=>true, 'extensions'=>Config::get('validImageTypes'), 'mandatory'=>false],
 			'sql'                     => "binary(16) NULL"
 		],
 		'formular' => [
