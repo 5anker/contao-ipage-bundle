@@ -76,7 +76,7 @@
 				<div class="tab-content pt-5 mb-5" id="nav-tabContent">
 					<?php if(count($this->news)):?>
 					<div class="tab-pane fade show active" id="nav-news" role="tabpanel" aria-labelledby="nav-news-tab">
-						<?= ($this->detect->isMobile()) ? '<wls-slider>' : '<div style="max-height: 600px; overflow: auto;">'; ?>
+						<?= ($this->detect->isMobile()) ? '<wls-slider>' : '<div style="max-height: 600px; overflow: auto; margin: -20px; padding: 20px">'; ?>
 						<?php foreach($this->news as $k => $news): ?>
 						<?= $this->insert('news_ipage', (array)$news); ?>
 						<?php endforeach; ?>
@@ -85,7 +85,7 @@
 					<?php endif; ?>
 					<?php if(count($this->cruises)): ?>
 					<div class="tab-pane fade" id="nav-cruises" role="tabpanel" aria-labelledby="nav-cruises-tab">
-						<?= ($this->detect->isMobile()) ? '<wls-slider>' : '<div style="max-height: 600px; overflow: auto;">'; ?>
+						<?= ($this->detect->isMobile()) ? '<wls-slider>' : '<div style="max-height: 600px; overflow: auto; margin: -20px; padding: 20px">'; ?>
 						<?php foreach($this->cruises as $k => $cruise): ?>
 						<?= $this->insert('news_ipage', (array)$cruise); ?>
 						<?php endforeach; ?>
