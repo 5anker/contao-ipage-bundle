@@ -99,7 +99,7 @@
 				<?php if(!empty($this->query)): ?>
 				<div class="card mb-4">
 					<div class="card-body">
-						<wls-navigator pm="2" query="<?= $this->query; ?>" redirect="popup"></wls-navigator>
+						<wls-navigator pm="30" query="<?= $this->query; ?>" redirect="popup"></wls-navigator>
 					</div>
 				</div>
 				<?php endif; ?>
