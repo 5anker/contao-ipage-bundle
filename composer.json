@@ -12,12 +12,12 @@
 		"role": "Developer"
 	}],
 	"require": {
-        "php": "^7.1",
+        "php": "^7.3",
         "patchwork/utf8": "^1.2",
-        "symfony/config": "3.4.* || 4.1.*",
-        "symfony/dependency-injection": "3.4.* || 4.1.*",
-        "symfony/http-kernel": "3.4.* || 4.1.*",
-        "symfony/yaml": "3.4.* || 4.1.*",
+        "symfony/config": "4.1.*",
+        "symfony/dependency-injection": "4.1.*",
+        "symfony/http-kernel": "4.1.*",
+        "symfony/yaml": "4.1.*",
         "bugbuster/contao-mobiledetection-bundle": "^1.0"
     },
     "conflict": {
